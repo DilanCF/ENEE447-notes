@@ -62,6 +62,8 @@ API refers to user programs
 
 If only the OS may interact with the HW, will be very inefficient. This is why we have the bit on the RHS where sometimes the libraries and application programs are using the HW directly  
 
+***Q: What are some examples where the application programs would need to access the HW directly and how?***
+
 ![Alt text](img/Lecture01/image-6.png)  
 
 ![Alt text](img/Lecture01/image-7.png)  
@@ -163,13 +165,15 @@ Long term scheduler will figure out how many resources we have and if we can ass
 Short term scheduler will decide which process to run next in this ^ timeline  
 * Different ways to implement this  
 
+[Good video on scheduling](https://youtu.be/kgM00Edcm7A?si=wnDc707EZZeyQd-u)  
+
 ![Alt text](img/Lecture01/image-30.png)  
 
 ![Alt text](img/Lecture01/image-31.png)  
 
 ![Alt text](img/Lecture01/image-32.png)  
 
-What if a program is never giving up the CPU? 
+What if a program is never giving up the CPU? <sub>or better yet, never letting them down?</sub>
 * We want the OS to gain control after a certain amount of time
 * Before giving control to the process, we have a time for it. As long as it is not doing IO, and it is taking too long, we send a HW interrupt and force it to gain control once again  
 
