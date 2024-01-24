@@ -9,9 +9,9 @@ Need to buy a Raspberry Pi
 2 exams, non cumulative  
 
 Approx. March 13 and May 8  
-* Old Exams available on ELMS <sub>huh, how unlike a certain professor who also teaches OS...</sub>
+* Old Exams available on ELMS <sub>huh, how unlike a certain other professor who also teaches OS...</sub>
 
-### Chapter 2: OS Overview  
+### ENEE350 review 
 
 3 major parts:
 * Processor management
@@ -22,15 +22,15 @@ After, may cover security, VM, cloud computing, etc.
 
 1st part is biggest acc. to prof  
 
-![Alt text](image.png)  
+![Alt text](img/Lecture01/image.png)  
 
-![Alt text](image-1.png)  
+![Alt text](img/Lecture01/image-1.png)  
 
 Anytime a system has more than one program running, must manage th processes, enable protection, etc.  
 
 Operating systems are as varied as the computer systems that we have all around us  
 
-![Alt text](image-2.png)  
+![Alt text](img/Lecture01/image-2.png)  
 
 Not much time spent on structure  
 
@@ -43,13 +43,13 @@ Need to share the resources and protect processes from each other when the time 
 
 Security: Prevent external threats from manipulating our OS  
 
-![Alt text](image-3.png)  
+![Alt text](img/Lecture01/image-3.png)  
 
 Persistence: Related to IO  
 
-![Alt text](image-4.png)  
+![Alt text](img/Lecture01/image-4.png)  
 
-![Alt text](image-5.png)  
+![Alt text](img/Lecture01/image-5.png)  
 
 At the bottom, we have the HW (internal)  
 
@@ -58,86 +58,86 @@ ISA is the interface that allows for SW to manipulate HW
 OS runs in kernel mode w/ higher privileges  
 
 API refers to user programs  
-* Sometimes for efficienty, may need to access the OS directly. Use ABI in this case  
+* Sometimes for efficiency, may need to access the OS directly. Use ABI in this case  
 
-If only the OS may interact with the HW, will be very inefficient. This is why we have the bit on the RHS where somtimes the libraries and application programs are using the HW directly  
+If only the OS may interact with the HW, will be very inefficient. This is why we have the bit on the RHS where sometimes the libraries and application programs are using the HW directly  
 
-![Alt text](image-6.png)  
+![Alt text](img/Lecture01/image-6.png)  
 
-![Alt text](image-7.png)  
+![Alt text](img/Lecture01/image-7.png)  
 
 3 is the end-user view  
 
 Virtual machine
 * Virtualization at different levels  
 
-![Alt text](image-8.png)  
+![Alt text](img/Lecture01/image-8.png)  
 
 Example of VM  
 
-![Alt text](image-9.png)  
+![Alt text](img/Lecture01/image-9.png)  
 
-IN a ssytem with only one process, short bursts of CPU executions, with long IO waits  
+IN a system with only one process, short bursts of CPU executions, with long IO waits  
 * Very inefficient  
  * This is where we can use multiprogramming to our advantage  
 
-![Alt text](image-10.png)  
+![Alt text](img/Lecture01/image-10.png)  
 
 With this, wait times are getting overlapped, making more use of the processor  
 
-However, due to this, resource management becomes more of a concern (we dont want programs to colbber each others resources)  
+However, due to this, resource management becomes more of a concern (we don't want programs to clobber each others resources)  
 
-![Alt text](image-11.png)  
+![Alt text](img/Lecture01/image-11.png)  
 
-![Alt text](image-12.png)  
+![Alt text](img/Lecture01/image-12.png)  
 
-![Alt text](image-13.png)
+![Alt text](img/Lecture01/image-13.png)
 
-![Alt text](image-14.png)  
+![Alt text](img/Lecture01/image-14.png)  
 
 We need interrupts in order to stop execution for any reason (IO, checks, etc.)  
 
-![Alt text](image-15.png)  
+![Alt text](img/Lecture01/image-15.png)  
 
 If a program wants to interrupt the system, we make a system call which is trickled down to the HW  
 
-![Alt text](image-16.png)  
+![Alt text](img/Lecture01/image-16.png)  
 
 <sub>deja vu...</sub>  
 
-![Alt text](image-17.png)  
+![Alt text](img/Lecture01/image-17.png)  
 
 The Linux API will list all the system calls it supports
 * OS must support all system calls  
 
-![Alt text](image-18.png)  
+![Alt text](img/Lecture01/image-18.png)  
 
-![Alt text](image-19.png)  
+![Alt text](img/Lecture01/image-19.png)  
 
-![Alt text](image-20.png)  
+![Alt text](img/Lecture01/image-20.png)  
 
 Device: IO devices  
 
-![Alt text](image-21.png)  
+![Alt text](img/Lecture01/image-21.png)  
 
-![Alt text](image-22.png)  
+![Alt text](img/Lecture01/image-22.png)  
 
-![Alt text](image-23.png)  
+![Alt text](img/Lecture01/image-23.png)  
 
-![Alt text](image-24.png)  
+![Alt text](img/Lecture01/image-24.png)  
 
-Note that certain system calls are vastly differnt between OSs. THis is why people usually use APIs
+Note that certain system calls are vastly different between OSs. THis is why people usually use APIs
 * Differences go beyond name, some implementations are vastly different (i.e fork vs CreateProcess)  
 
-![Alt text](image-25.png)  
+![Alt text](img/Lecture01/image-25.png)  
 
-Doing this will slow us down, so there are concessioons between portability and speed  
+Doing this will slow us down, so there are concessions between portability and speed  
 
-![Alt text](image-26.png)
+![Alt text](img/Lecture01/image-26.png)
 
-`read_command` will take the command and the parametes inserted and store them into `command` and `parameters`. This will then allow the child to execute the command with the parameters  
+`read_command` will take the command and the parameters inserted and store them into `command` and `parameters`. This will then allow the child to execute the command with the parameters  
 
-![Alt text](image-27.png)  
+![Alt text](img/Lecture01/image-27.png)  
 
 IO devices are accessible only in kernel mode  
 * Accessed by device driver  
@@ -145,35 +145,35 @@ IO devices are accessible only in kernel mode
 
 DMA: Direct Memory Access  
 
-![Alt text](image-28.png)  
+![Alt text](img/Lecture01/image-28.png)  
 
 CPU and disk controller usually overlap  
 
-![Alt text](image-29.png)  
+![Alt text](img/Lecture01/image-29.png)  
 
-Whats th limit? Wher should we stop, if at all?  
-* We dont want too many procees active at a time  
-* Memory wil need to be partiioned  
-* Proceses may not get sufficient memory  
+What's the limit? Where should we stop, if at all?  
+* We don't want too many processes active at a time  
+* Memory wil need to be partitioned  
+* Processes may not get sufficient memory  
 
-Medium term scehduler will decide how many active proceses to keep in memory 
+Medium term scheduler will decide how many active processes to keep in memory 
 
 Long term scheduler will figure out how many resources we have and if we can assign processes  
 
 Short term scheduler will decide which process to run next in this ^ timeline  
 * Different ways to implement this  
 
-![Alt text](image-30.png)  
+![Alt text](img/Lecture01/image-30.png)  
 
-![Alt text](image-31.png)  
+![Alt text](img/Lecture01/image-31.png)  
 
-![Alt text](image-32.png)  
+![Alt text](img/Lecture01/image-32.png)  
 
 What if a program is never giving up the CPU? 
-* We wnt the OS to gain control after a certain amount of time
-* before giving control to the procss, we have a time for it. As long as it is not doing IO, and it is taking too long, we send a HW interrupt and force it to gain control once again  
+* We want the OS to gain control after a certain amount of time
+* Before giving control to the process, we have a time for it. As long as it is not doing IO, and it is taking too long, we send a HW interrupt and force it to gain control once again  
 
-![Alt text](image-33.png)  
+![Alt text](img/Lecture01/image-33.png)  
 
 Process manager: OS  
 * Int. handler also part of OS  
@@ -188,7 +188,7 @@ Always looks at the whole picture
 
 Unless specifically mentioned, we always talk about a single core system  
 
-![Alt text](image-34.png)  
+![Alt text](img/Lecture01/image-34.png)  
 
 Time is being shared among different processes  
 
@@ -196,30 +196,31 @@ We need interrupt-based context switches for these interactive applications
 
 *Review over, time for the new stuff*  
 
-![Alt text](image-35.png)  
+### Chapter 2: OS Overview  
+
+![Alt text](img/Lecture01/image-35.png)  
 
 Program: Static lines of code sitting somewhere in memory  
 
 Process: Dynamic instance of a program that is currently running  
 
-![Alt text](image-36.png)  
+![Alt text](img/Lecture01/image-36.png)  
 
-![Alt text](image-37.png)  
+![Alt text](img/Lecture01/image-37.png)  
 
-Green is the sturcture of the Unix OS
+Green is the structure of the Unix OS
 * File subsystem: IO  
 
 Both sides may need to talk to each other  
 
 File system is character based system  
 
-![Alt text](image-38.png)  
+![Alt text](img/Lecture01/image-38.png)  
 
-![Alt text](image-39.png)  
+![Alt text](img/Lecture01/image-39.png)  
 
-![Alt text](image-40.png)  
+![Alt text](img/Lecture01/image-40.png)  
 
-![Alt text](image-41.png)  
+![Alt text](img/Lecture01/image-41.png)  
 
 Next time: Chapter 3 and processes  
-
