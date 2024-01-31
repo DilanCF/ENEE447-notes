@@ -216,27 +216,3 @@ OS functions exec as separate processes
 * *???*
 
 *Ended here, will pick up next lecture*
-
-![Alt text](img/Lecture02/image-39.png)  
-
-![Alt text](img/Lecture02/image-40.png)  
-
-![Alt text](img/Lecture02/image-41.png)  
-
-![Alt text](img/Lecture02/image-42.png)  
-
-![Alt text](img/Lecture02/image-43.png)  
-
-![Alt text](img/Lecture02/image-44.png)  
-
-![Alt text](img/Lecture02/image-45.png)  
-
-![Alt text](img/Lecture02/image-46.png)  
-
-![Alt text](img/Lecture02/image-47.png)  
-
-![Alt text](img/Lecture02/image-48.png)  
-
-![Alt text](img/Lecture02/image-49.png)  
-
-![Alt text](img/Lecture02/image-50.png)  
