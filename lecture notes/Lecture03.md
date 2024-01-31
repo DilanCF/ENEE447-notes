@@ -8,9 +8,9 @@
 
 ![Alt text](img/Lecture03/image-1.png)  
 
-Refers to the middle model from last lecture  
+Refers to the middle model from last lecture:  
 
-*Insert image here*  
+![Alt text](img/misc/image.png) 
 
 The scheduler and other parts are not operating on a per-process basis  
 
@@ -100,7 +100,7 @@ say we have 4 cores. More threads == run in parallel
 
 ![Alt text](img/Lecture03/image-19.png)  
 
-Here, we spawn a nw thread for each service request  
+Here, we spawn a new thread for each service request  
 
 ![Alt text](img/Lecture03/image-20.png)  
 
