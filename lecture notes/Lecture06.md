@@ -44,7 +44,7 @@ We are trying to implement the lock in HW
 
 ![Alt text](img/Lecture06/image-6.png)  
 
-*Insert drawing*
+![Alt text](img/Lecture06/lec6-drawing.png)
 
 We have memory, and the data we want to access in the critical section is highlighted (Shared buffer)  
 
