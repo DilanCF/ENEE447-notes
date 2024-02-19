@@ -126,3 +126,61 @@ TM is an idea from the database community
 
 OpenMP is more standard for parallel programming  
 
+![alt text](image-15.png)  
+
+Enabling/ disabling preemtion == disabling interrupts  
+
+Spinlock: Instead of request going into memory, relies on cache coherence and only checking there  
+* Avoids creation of traffic  
+
+Yes, it is a busy wait, but does not cause traffic  
+
+![alt text](image-16.png)  
+
+![alt text](image-17.png)  
+
+![alt text](image-18.png)  
+
+This is an important chapter for exam 1!!!  
+
+![alt text](image-19.png)  
+
+We will need to know how to analyze the scenarios circled. Given an incorrect solution, we must find the issue, explain it, and give a correct solution and explain why it solves the issue  
+
+### Chapter 9: Uniprocessor scheduling  
+
+Scheduling: 3 levels
+* Long term
+* Medium term
+* Short term
+
+![alt text](image-20.png)  
+
+Long-term: Whether to create a new process NOW :lightningbolt:
+
+Medium-term: " " swap out or in some processes
+
+Short-term: Which process or KLT to run next  
+* KLT: Kernel Level Thread  
+
+![alt text](image-21.png)  
+
+![alt text](image-22.png)  
+
+![alt text](image-23.png)  
+
+![alt text](image-24.png)  
+
+Scehduler makes the decision, and the dispatcher does th actual switching  
+
+![alt text](image-25.png)  
+
+![alt text](image-26.png)  
+
+![alt text](image-27.png)  
+
+What should a short-term scehduler be looking at?  
+* Fairness: Say 5 processes ebter system in some order. Whoever came first, goes first, etc. 
+    * OR: What % of the CPU time are each process getting? Is one getting more than the others?  
+* Throughput: How many proceses are finishing in unit time? 
+* Priorities: 
