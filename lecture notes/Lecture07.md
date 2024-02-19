@@ -20,13 +20,13 @@ Now, producer need sto check whenever the buffer is full (will need to wait if s
 
 ![alt text](img/Lecture07/image-1.png)  
 
-This solution works. We dont use any varibles, instead using semaphores. Also need to check for full buffer, so we have an additional semaphore (`e`) which will tell us how many empty slots there are.  
+This solution works. We don't use any variables, instead using semaphores. Also need to check for full buffer, so we have an additional semaphore (`e`) which will tell us how many empty slots there are.  
 
 As items are added, e is decremented  
 
 We want to make sure that the following four things are  
 1. Mutual exclusion
-    * Append is the crtiical section, and we are acquiring and releasing before and after the critical seciton respectively 
+    * Append is the critical section, and we are acquiring and releasing before and after the critical section respectively 
 2. Progress
     * Depends on how the semaphore is implemented
         * Random: Possibility of starvation
@@ -43,17 +43,17 @@ Shared data base with readers and writers
 Readers only read, therefore we can allow concurrent readers 
 * No mutual exclusion needed
 
-Writier could be reading as well as reading in order to update  
-* If writier is in CS, no one else can be in the same section at the same time  
+Writer could be reading as well as reading in order to update  
+* If writer is in CS, no one else can be in the same section at the same time  
 
 ![alt text](img/Lecture07/image-3.png)  
 
 ![alt text](img/Lecture07/image-4.png)  
 
 Looking at the writer code, we make a wait on `wsem`. 
-* Binary semaphore for mutual exlcusion
-* If succeesful, will go in and write, then signal
-    * Quarantees only one writer can go in at a time  
+* Binary semaphore for mutual exclusion
+* If successful, will go in and write, then signal
+    * Guarantees only one writer can go in at a time  
 
 
 Reader does a semWait on `x`. IF it got x, will increment readCount
@@ -75,7 +75,7 @@ x will ensure mutual exclusion within the readers
 
 3. Starvation
     * If multiple threads are waiting, is there a possibility some threads may end up being overlooked? 
-    * Yes, writer needs to wait for not only the current raders but also for the future readers 
+    * Yes, writer needs to wait for not only the current readers but also for the future readers 
         * Too many readers == writer starvation  
         * Sol: Have a way to indicate that a writer is waiting, and act accordingly
             * Con: Too many writers == Readers starve instead  
@@ -88,12 +88,12 @@ x will ensure mutual exclusion within the readers
 
 For now, lets assume there is no z variable and analyze  
 
-The x sema is for mutual exlcuision  
+The x sema is for mutual exclusion  
 
 However, we have an rsem this time
 * Servers same purpose as lsem to writer  
 
-For the writer, we ahve added the write count.  
+For the writer, we have added the write count.  
 
 Does not guarantee no starvation  
 
@@ -101,7 +101,7 @@ Now, lets talk about z
 
 z was added in order to improve the situation
 
-Without z, all the readers tht are coming after wards will end up qing at rsem. Instead of lettnig a tug-of-wat with the rsem in bout the writer and reader, if it is not using the queue, the writer may get to go.  
+Without z, all the readers tht are coming afterwards will end up queuing at rsem. Instead of letting a tug-of-wat with the rsem in bout the writer and reader, if it is not using the queue, the writer may get to go.  
 
 ![alt text](img/Lecture07/image-7.png)  
 
@@ -109,29 +109,29 @@ Good table for analyzing the code
 
 ![alt text](img/Lecture07/image-8.png)
 
-Dining philospohers PagMan  
+Dining philosophers PagMan  
 
 we can think of each philosopher as an individual thread, and the resources being the chopsticks  
 
-Naive method: A philospohr, when wanting to eat, first gets left, then right  
+Naive method: A philosopher, when wanting to eat, first gets left, then right  
 
 Mutual exclusion: Sat
 Progress: Sat
 Starvation: Not sat with weak semaphore  
 
-Deadlock problem: All philospohers try to eat at the same time and they are each waiting for the other to release a chopstick  
+Deadlock problem: All philosophers try to eat at the same time and they are each waiting for the other to release a chopstick  
 
 ![alt text](img/Lecture07/image-9.png)  
 
 Naive method code  
 
-Probelm is, we ahve 5 resources (chopsticks) and in order to prevent circular wait, order them 1-5. If we ensure that every philospoher will kow wihch 2 chopsticks they need, they ill pick them up only in one order. This relieves the circular wait issue  
+Problem is, we have 5 resources (chopsticks) and in order to prevent circular wait, order them 1-5. If we ensure that every philosopher will know which 2 chopsticks they need, they will pick them up only in one order. This relieves the circular wait issue  
 
 ![alt text](img/Lecture07/image-10.png)  
 
 ![alt text](img/Lecture07/image-11.png)  
 
-Other situaitons where deadlock is possible  
+Other situations where deadlock is possible  
 
 Since P<sub>0</sub> and P<sub>1</sub> are both trying to get the same lock at the same time, it is possible to have deadlock  
 
