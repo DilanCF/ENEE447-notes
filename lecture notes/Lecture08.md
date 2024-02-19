@@ -120,7 +120,7 @@ Rolling back occurs whenever there is a conflict, ad we have to go back
 
 Backing off, then waiting for some random time  
 
-Transacitonal memory is useful if you think conflicts will not be likely ???  
+Transacitonal memory is useful if you think conflicts will not be likely  
 
 TM is an idea from the database community  
 
@@ -180,7 +180,29 @@ Scehduler makes the decision, and the dispatcher does th actual switching
 ![alt text](image-27.png)  
 
 What should a short-term scehduler be looking at?  
-* Fairness: Say 5 processes ebter system in some order. Whoever came first, goes first, etc. 
+* Fairness: Say 5 processes enter system in some order. Whoever came first, goes first, etc. 
     * OR: What % of the CPU time are each process getting? Is one getting more than the others?  
 * Throughput: How many proceses are finishing in unit time? 
-* Priorities: 
+* Priorities: Which process has cirital information  
+* Context switch time
+
+![alt text](image-28.png)  
+
+![alt text](image-29.png)  
+
+Batch systems vs. interactive systems vs. real time  
+
+Batch: Mostly compute intensive, CPU-bound processing  
+* Usually, no human operator  
+* Nonpreepmtive 
+
+Interactive: Consumer-grade
+* Preemptive  
+
+Real-time: Engine control, anti-brake system  
+* Hard deadlines, etc.
+* May have both, but typically preemptive  
+
+![alt text](image-30.png)  
+
+Wednesday: May finish this chapter  
