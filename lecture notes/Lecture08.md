@@ -13,7 +13,7 @@ Monitors are OO approach
 * Less parallelism  
 * More overhead  
 
-![alt text](image.png)  
+![alt text](img/Lecture08/image.png)  
 
 In the caee of prod-cons, 2 main methods
 * Put item in
@@ -24,7 +24,7 @@ In the case of the monitor, there will be 2 gray rectangles in the middle part
 Producer code ned not worrry whether it can or cannot enter  
 * Same thing for consumer  
 
-![alt text](image-1.png)  
+![alt text](img/Lecture08/image-1.png)  
 
 Application programmer doesnt need to worry about this ^ implementation  
 
@@ -32,28 +32,28 @@ Monitors releives the programmer from doing this ^
 
 MOnitor allow youto specify new variable type: Condition variable  
 
-![alt text](image-2.png)  
+![alt text](img/Lecture08/image-2.png)  
 
 These are used for signalling, and we may signal from one to the other  
 
-![alt text](image-3.png)  
+![alt text](img/Lecture08/image-3.png)  
 
 Will not be asked to analyze/ write with monitors in exam! <sub>only thing i got right on the first exam last time...</sub>  
 
-![alt text](image-4.png)  
+![alt text](img/Lecture08/image-4.png)  
 
 Monitor has 2 functions: append and take  
 
-![alt text](image-5.png)  
+![alt text](img/Lecture08/image-5.png)  
 
-![alt text](image-6.png)  
+![alt text](img/Lecture08/image-6.png)  
 
-![alt text](image-7.png)  
+![alt text](img/Lecture08/image-7.png)  
 
-![alt text](image-8.png)  
+![alt text](img/Lecture08/image-8.png)  
 
-***Edit image names!!!***
-![alt text](image-10.png)  
+***Edit img/Lecture08/image names!!!***
+![alt text](img/Lecture08/image-9.png)  
 
 Shared memory model we saw could be made explicit, but it is usually implicit (semas used to ensure synch)  
 
@@ -66,7 +66,7 @@ Explicit communication: No need to worry about CS
 
 Message passing does not restrict us to one system, we can communicate all thruought a network  
 
-![alt text](image-11.png)  
+![alt text](img/Lecture08/image-10.png)  
 
 Due to having a source and destination, we call this explicit  
 
@@ -80,15 +80,15 @@ Blocking recieve means we need a message in order to proceed
 
 Most common protocol: Nonblocking send, blocking recieve  
 
-![alt text](image-12.png)  
+![alt text](img/Lecture08/image-11.png)  
 
 In main, howevr many slots we have, that many null sends were made, giving us our capacity  
 
 Clue's in the name! If we get a "mayproduce" message, we know we may start producing. Consequently, when we produce, we send a "mayconsume" mesage to know we may consume  
 
-![alt text](image-13.png)  
+![alt text](img/Lecture08/image-12.png)  
 
-![alt text](image-14.png)   
+![alt text](img/Lecture08/image-13.png)   
 
 with locks: 
 
@@ -126,7 +126,7 @@ TM is an idea from the database community
 
 OpenMP is more standard for parallel programming  
 
-![alt text](image-15.png)  
+![alt text](img/Lecture08/image-14.png)  
 
 Enabling/ disabling preemtion == disabling interrupts  
 
@@ -135,15 +135,15 @@ Spinlock: Instead of request going into memory, relies on cache coherence and on
 
 Yes, it is a busy wait, but does not cause traffic  
 
-![alt text](image-16.png)  
+![alt text](img/Lecture08/image-15.png)  
 
-![alt text](image-17.png)  
+![alt text](img/Lecture08/image-16.png)  
 
-![alt text](image-18.png)  
+![alt text](img/Lecture08/image-17.png)  
 
 This is an important chapter for exam 1!!!  
 
-![alt text](image-19.png)  
+![alt text](img/Lecture08/image-18.png)  
 
 We will need to know how to analyze the scenarios circled. Given an incorrect solution, we must find the issue, explain it, and give a correct solution and explain why it solves the issue  
 
@@ -154,7 +154,7 @@ Scheduling: 3 levels
 * Medium term
 * Short term
 
-![alt text](image-20.png)  
+![alt text](img/Lecture08/image-19.png)  
 
 Long-term: Whether to create a new process NOW :lightningbolt:
 
@@ -163,21 +163,21 @@ Medium-term: " " swap out or in some processes
 Short-term: Which process or KLT to run next  
 * KLT: Kernel Level Thread  
 
-![alt text](image-21.png)  
+![alt text](img/Lecture08/image-20.png)  
 
-![alt text](image-22.png)  
+![alt text](img/Lecture08/image-21.png)  
 
-![alt text](image-23.png)  
+![alt text](img/Lecture08/image-22.png)  
 
-![alt text](image-24.png)  
+![alt text](img/Lecture08/image-23.png)  
 
 Scehduler makes the decision, and the dispatcher does th actual switching  
 
-![alt text](image-25.png)  
+![alt text](img/Lecture08/image-24.png)  
 
-![alt text](image-26.png)  
+![alt text](img/Lecture08/image-25.png)  
 
-![alt text](image-27.png)  
+![alt text](img/Lecture08/image-26.png)  
 
 What should a short-term scehduler be looking at?  
 * Fairness: Say 5 processes enter system in some order. Whoever came first, goes first, etc. 
@@ -186,9 +186,9 @@ What should a short-term scehduler be looking at?
 * Priorities: Which process has cirital information  
 * Context switch time
 
-![alt text](image-28.png)  
+![alt text](img/Lecture08/image-27.png)  
 
-![alt text](image-29.png)  
+![alt text](img/Lecture08/image-28.png)  
 
 Batch systems vs. interactive systems vs. real time  
 
@@ -203,6 +203,6 @@ Real-time: Engine control, anti-brake system
 * Hard deadlines, etc.
 * May have both, but typically preemptive  
 
-![alt text](image-30.png)  
+![alt text](img/Lecture08/image-29.png)  
 
 Wednesday: May finish this chapter  
