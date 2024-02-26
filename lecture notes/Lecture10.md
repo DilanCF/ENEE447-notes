@@ -8,7 +8,7 @@ Last time: How we can figure out if a scheduling algo is good
 * Queueing theory
     * Look at what are the resources where the processor is spending time  
 
-Lambda: arrival time
+Lambda: arrival time  
 Mu: processing time  
 
 [M/M/1 queue](https://en.wikipedia.org/wiki/M/M/1_queue)  
@@ -218,7 +218,7 @@ Global: Good for load balancing
 
 ![alt text](img/Lecture10/image-36.png)  
 
-NP problems :aware:  
+NP problems ![alt text](img/misc/Aware.png)  
 
 ![alt text](img/Lecture10/image-37.png)  
 
