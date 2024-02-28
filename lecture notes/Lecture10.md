@@ -99,7 +99,7 @@ If not, veri bad
 
 *End of chapter 9*  
 
-### Chapter 10: Multiprocessor, Multicore, and Real-Time Scheduling  
+### Chapter 10a: Multiprocessor and Multicore Scheduling  
 
 In the first half, we will be looking at multiprocessor  
 
