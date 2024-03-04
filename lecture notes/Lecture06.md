@@ -1,4 +1,4 @@
-# ENEE447 Lecture 3  
+# ENEE447 Lecture 6  
 
 > 2/12/24  
 
