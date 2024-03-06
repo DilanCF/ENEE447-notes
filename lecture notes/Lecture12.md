@@ -10,7 +10,7 @@ Looking at scheduling algos fro real-time systems
 
 RTS have periodic tasks  
 
-![alt text](image.png)  
+![alt text](img/Lecture12/image.png)  
 
 Occasionally, if there is an aperiodic task, there must be a way to take care of it  
 
@@ -22,68 +22,68 @@ For periodic tasks, its sufficient to have a hyperperiod
 
 IN exam 2, if there is a question for hyperperiod, we may need to find i and draw out the schedule for it  
 
-![alt text](image-1.png)  
+![alt text](img/Lecture12/image-1.png)  
 
 Any time we are given a set of tasks, first we need to calculate the total utilization. If more than 1, we cannot schedule anymore  
 * Here, $2/5$ + $9/15$ = 1
 
 If there is an aperiodic task, some deadlines will be missed  
 
-The bottom image shows that after the first hyperperiod, everything can repeat  
+The bottom img/Lecture12/image shows that after the first hyperperiod, everything can repeat  
 
-![alt text](image-2.png)  
+![alt text](img/Lecture12/image-2.png)  
 
 We really need to look at the deadlines, not so much on fairness
 * RR not great for RTS  
 
-![alt text](image-3.png)  
+![alt text](img/Lecture12/image-3.png)  
 
 *Change png names starting here*
-![alt text](image-5.png)
+![alt text](img/Lecture12/image-5.png)
 
-If we try to do FCFS (first image), we miss deadlines due to other tasks running at the time we wanted to do T<sub>1</sub> in order to meet the deadline  
+If we try to do FCFS (first img/Lecture12/image), we miss deadlines due to other tasks running at the time we wanted to do T<sub>1</sub> in order to meet the deadline  
 
 *FIX THIS PNG: (1,3) -> (3,1), etc.*
 
 Whereas for the second algorithm, we can see that we meet the deadliness comfortably for both tasks  
 
-![alt text](image-6.png)  
+![alt text](img/Lecture12/image-6.png)  
 
 We usually know how many tasks we will have due to a more deterministic system  
 
-![alt text](image-7.png)  
+![alt text](img/Lecture12/image-7.png)  
 
 Feasibility: Is the utilization less than 1?  
 
-![alt text](image-8.png)  
+![alt text](img/Lecture12/image-8.png)  
 
-![alt text](image-9.png)  
+![alt text](img/Lecture12/image-9.png)  
 
-![alt text](image-10.png)  
+![alt text](img/Lecture12/image-10.png)  
 
 If util > 1, impossible feasibility.
 
 If < 1, some algorithms may still not be able to be scheduled  
 
-![alt text](image-11.png)  
+![alt text](img/Lecture12/image-11.png)  
 
-![alt text](image-12.png)  
+![alt text](img/Lecture12/image-12.png)  
 
 Loosely categorize them into these groups since some algorithms may be hybrids  
 
 Static == offline  
 
-![alt text](image-13.png)  
+![alt text](img/Lecture12/image-13.png)  
 
 Not much difference: Main one is the terminology  
 * One gives priority, which we take into consideration
     * Priority is also given statically  
 
-![alt text](image-14.png)  
+![alt text](img/Lecture12/image-14.png)  
 
 Best effort: Used by many modern operating systems  
 
-![alt text](image-15.png)  
+![alt text](img/Lecture12/image-15.png)  
 
 Cyclic, RMS, EDF algorithms will be studied first  
 
@@ -93,31 +93,31 @@ Divide into slots
 
 At the beginning of every minor cycle, look at the ready tasks and determine based on deadlines which should go next  
 
-![alt text](image-16.png)  
+![alt text](img/Lecture12/image-16.png)  
 
 (Here he chose to change some of the variable letters, not really necessary)  
 
 Major cycle == hyperperiod  
 
-![alt text](image-17.png)  
+![alt text](img/Lecture12/image-17.png)  
 
 Brown == T1
 Blue == T2
 Green == T3  
 
-![alt text](image-18.png)  
+![alt text](img/Lecture12/image-18.png)  
 
-![alt text](image-19.png)  
+![alt text](img/Lecture12/image-19.png)  
 
-![alt text](image-20.png)  
+![alt text](img/Lecture12/image-20.png)  
 
-![alt text](image-21.png)  
+![alt text](img/Lecture12/image-21.png)  
 
-![alt text](image-22.png)  
+![alt text](img/Lecture12/image-22.png)  
 
-![alt text](image-23.png)  
+![alt text](img/Lecture12/image-23.png)  
 
-![alt text](image-24.png)  
+![alt text](img/Lecture12/image-24.png)  
 
 Highest-priority ready task (The one with the shorted period)
 
@@ -134,13 +134,13 @@ Priorities in descending order:
 2. T1
 3. T3  
 
-![alt text](image-25.png)  
+![alt text](img/Lecture12/image-25.png)  
 
 Hyperperiod: 140  
 
 Calculating utilization gives us 131/140, meaning we can try and schedule these tasks  
 
-![alt text](image-26.png)  
+![alt text](img/Lecture12/image-26.png)  
 
 if your utilization is less than .69 (nice), you're guaranteed to have a proper schedule  
 
@@ -154,17 +154,17 @@ What will happen if we try to use a non-preemptive method?
 
 *Phone pic here*
 
-![alt text](image-27.png)  
+![alt text](img/Lecture12/image-27.png)  
 
-![alt text](image-28.png)  
+![alt text](img/Lecture12/image-28.png)  
 <sub>hehe nice max utilization</sub>  
 
-![alt text](image-29.png)  
+![alt text](img/Lecture12/image-29.png)  
 
-![alt text](image-30.png)  
+![alt text](img/Lecture12/image-30.png)  
 
-![alt text](image-31.png)  
+![alt text](img/Lecture12/image-31.png)  
 
-![alt text](image-32.png)  
+![alt text](img/Lecture12/image-32.png)  
 
 *Will finish rest on Wednesday*
