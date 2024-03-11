@@ -1,6 +1,6 @@
-# ENEE447 Lecture 12 
+# ENEE447 Lecture 13 
 
-> 3/4/24
+> 3/6/24
 
 ### Chapter 10b: Real-Time Scheduling (cont.) 
 
