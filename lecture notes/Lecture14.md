@@ -26,7 +26,7 @@ Up to 5 threads can acquire the lock
 
 For reader-writer, need general sema  
 
-Last questnio on spring 2018 exam:
+Last question on spring 2018 exam:
 
 ![alt text](img/Lecture14/image.png)
 
@@ -40,7 +40,7 @@ First reader will wait, but after that all the other readers will not wait
 
 If we try to init `mutex_read` to 1, we can guarantee mutual exclusion, but then we lose the ability to have multiple readers (up to 10)  
 
-Second half is imilar to the first (data racing)  
+Second half is similar to the first (data racing)  
 
 To fix it, we need to fix `reader`  
 1. Continue to use the variable `reader`
@@ -52,7 +52,7 @@ shared sem mutex_reader = 1;
 shared sem mutex_write = 1;
 ```  
 
-Need a mechnism to ensure we do not go over 10  
+Need a mechanism to ensure we do not go over 10  
 
 ```
 shared int readers = 0;
@@ -83,7 +83,7 @@ reader()
 
 This is wrong, however. We may have a data race when checking the value of `readers`
 
-Using a semapore instead of keeping the variable makes things easier  
+Using a semaphore instead of keeping the variable makes things easier  
 
 ```
 shared sem num_readers = 10;
