@@ -10,7 +10,7 @@
 
 Refers to the middle model from last lecture:  
 
-![Alt text](img/misc/image.png) 
+![Alt text](img/misc/proc-sharing.png) 
 
 The scheduler and other parts are not operating on a per-process basis  
 
