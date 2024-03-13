@@ -74,6 +74,8 @@ while(rv)
 x = 0;
 ```  
 
+[Good example of test and set](https://stackoverflow.com/questions/120937/what-is-test-and-set-used-for)
+
 As soon as we get a 0, we know we have succeeded in getting the lock and we can proceed
 
 Test and Set uses 2 memory instructions (load and store)  
