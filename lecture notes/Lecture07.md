@@ -115,8 +115,8 @@ we can think of each philosopher as an individual thread, and the resources bein
 
 Naive method: A philosopher, when wanting to eat, first gets left, then right  
 
-Mutual exclusion: Sat
-Progress: Sat
+Mutual exclusion: Sat  
+Progress: Sat  
 Starvation: Not sat with weak semaphore  
 
 Deadlock problem: All philosophers try to eat at the same time and they are each waiting for the other to release a chopstick  
