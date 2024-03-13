@@ -114,6 +114,7 @@ reader()
 ```
 
 ```
+shared int readers = 0;
 shared sem num_readers = 10;
 shared sem mutex_reader = 1;
 shared sem mutex_writer = 1;
@@ -140,6 +141,8 @@ reader()
     }
 }
 ```
+
+Now, with the above code, we have a semaphore for the readers that could potentially come into the critical section. `num_readers` will be decremented until we reach zero. We wait on `mutex_reader` in order to have access to `readers`. If this is the first reader, we wait on `mutex_writer` in order to make sure writer does not make any changes to the database while we read. Once we get `mutex_writer`, we let go of `mutex_reader` in order to let any other readers coming in to use it. When another reader comes in, it will wait on `mutex_reader` and increment `readers`. At this point, `readers = 2`. This means that we don't have to wait on `mutex_writer` since the first reader already took care of that for us. Thus, we can continue to signal `mutex_reader` and read from the critical section. Once we are done with the critical seciton, we signal `num_readers` in order to free up a slot for any other potential readers that may be waiting for a turn to read. From here, we wait on `mutex_reader` in order to get access to `readers` in order to decrement it. Once `readers = 0`, we know we are at the last reader, and we may release `mutex_writer`. Finally, we release `mutex_reader` since we are done altering `readers`  
 
 Scheduling:  
 
