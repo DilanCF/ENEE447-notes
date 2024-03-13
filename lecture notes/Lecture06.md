@@ -14,7 +14,7 @@ Incorporate code to code critical sections and have the code for entry and exit
 * Sol: Have lock then go into critical section
     * HW does not understand this however  
 
-![Alt text](img/Lecture06/image.png)  
+![Alt text](img/Lecture06/image.png)   
 
 Use software only solutions, but have a memory barrier
 * Makes sure that neither the compiler nor the HW will reorder instructions across a certain memory value  
