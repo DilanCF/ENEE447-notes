@@ -202,14 +202,14 @@ Answer: b
 
 Turn around times for the phone pic problem  
 
-P0: 14 - 1 = 13
-P1: 19 - 1 = 18
-P2: 5 - 3 = 2
-P3: 11 - 4 = 7
-P4: 7 - 2 = 5
+P0: 14 - 1 = 13  
+P1: 19 - 1 = 18  
+P2: 5 - 3 = 2  
+P3: 11 - 4 = 7  
+P4: 7 - 2 = 5  
 
-Wait times
-P0: 13 - 4 = 9
-P1: ...
+Wait times  
+P0: 13 - 4 = 9  
+P1: ...  
 
 Left to the reader as an exercise :)))
