@@ -4,15 +4,15 @@
 
 ### Chapter 10b: Real-Time Scheduling (cont.) 
 
-Last time: Loking at RT scheduling algorithms  
+Last time: Looking at RT scheduling algorithms  
 
 First one: Static scheduling
 * Create static table  
 
 Second: Rate Monotonic Scheduling (RMS)
-* Create priorites based on priorites  
+* Create priorites based on priorites  ??? 
 
-We're not really inoring deadlines, but we implicitly pay attentino to dealine on stati table-driven scheduling  
+We're not really ignoring deadlines, but we implicitly pay attention to deadline on static table-driven scheduling  
 
 ![alt text](img/Lecture13/image.png)  
 
@@ -20,13 +20,13 @@ We're not really inoring deadlines, but we implicitly pay attentino to dealine o
 
 EDF uses the completion deadline information  
 
-This utilization is different from the RMS algorithm that we saw last time which had a utiilization cap of 69% (nice)  
+This utilization is different from the RMS algorithm that we saw last time which had a utilization cap of 69% (nice)  
 
 ![alt text](img/Lecture13/image-2.png)  
 
-Due to the preemption, we preempt T2 when T1 reaches its deadline AND is not yet finished  
+Due to the preemption, we preempt T<sub>2</sub> when T<sub>1</sub> reaches its deadline AND is not yet finished  
 
-In RMS, when we reached a deadline, the task that had reached said deadline would get priority aand start running. This is not the case here  
+In RMS, when we reached a deadline, the task that had reached said deadline would get priority and start running. This is not the case here  
 
 ![alt text](img/Lecture13/image-3.png)  
 
@@ -41,11 +41,11 @@ Just giving fixed priority will not give higher utilization since the priorities
 * RMS
 * EDF  
 
-STarting deadline means "At wchich time do we have to start"
+Starting deadline means "At which time do we have to start?"
 
 ![alt text](img/Lecture13/image-6.png)  
 
-IF nonpreemptive, may not always be the best
+IF non-preemptive, may not always be the best
 * If preemptive, its good enough  
 
 ![alt text](img/Lecture13/image-7.png)  
@@ -54,7 +54,7 @@ For the first timeline, we see that without preemption, the B task's deadline is
 
 ![alt text](img/Lecture13/image-8.png)  
 
-Frist bullet is an ASSUMPTION  
+First bullet is an ASSUMPTION  
 * Because of this, this method is mostly theoretical  
 
 Utilization could be lower since you are purposely idling  
@@ -63,8 +63,8 @@ Utilization could be lower since you are purposely idling
 
 ![alt text](img/Lecture13/image-10.png)  
 
-Issure not only for RTS  
-* Any ststem with priorites  
+Issue not only for RTS  
+* Any system with priorities is susceptible to this 
 
 Sometimes, we have a situation where there are 2 tasks:  
 
@@ -89,36 +89,36 @@ The best-known instance of priority inversion involved the Mars Pathfinder missi
 
 ![alt text](img/Lecture13/image-12.png)  
 
-T3 has lowest priority, followed by T2 and then T1  
+T<sub>3</sub> has lowest priority, followed by T<sub>2</sub> and then T<sub>1</sub>  
 
 ![alt text](img/Lecture13/image-13.png)  
 
-IN the Mars rover case, when T3 has the resource as the lowest priority task, it will gain temporary higher priority  
+In the Mars rover case, when T<sub>3</sub> has the resource as the lowest priority task, it will gain temporary higher priority  
 
 ![alt text](img/Lecture13/image-14.png)  
 
-t1 : T3 begins executing.
-t2 : T3 locks semaphore s and enters its critical section.
-t3 : T1, which has a higher priority than T3, preempts T3 and begins executing.
-t4 : T1 attempts to enter its critical section but is blocked because the semaphore is locked by T3. T3 is immediately and temporarily assigned the same priority as T1. T3 resumes execution in its critical section.
-t5 : T2 is ready to execute but, because T3 now has a higher priority, T2 is unable to preempt T3.
-t6 : T3 leaves its critical section and unlocks the semaphore: its priority level is downgraded to its previous default level. T1 preempts T3 , locks the semaphore, and enters its critical section.
-t7 : T1 is suspended for some reason unrelated to T2, and T2 begins executing.  
+t1 : T<sub>3</sub> begins executing.
+t2 : T<sub>3</sub> locks semaphore s and enters its critical section.
+t3 : T<sub>1</sub>, which has a higher priority than T<sub>3</sub>, preempts T<sub>3</sub> and begins executing.
+t4 : T<sub>1</sub> attempts to enter its critical section but is blocked because the semaphore is locked by T<sub>3</sub>. T<sub>3</sub> is immediately and temporarily assigned the same priority as T<sub>1</sub>. T<sub>3</sub> resumes execution in its critical section.
+t5 : T<sub>2</sub> is ready to execute but, because T<sub>3</sub> now has a higher priority, T<sub>2</sub> is unable to preempt T<sub>3</sub>.
+t6 : T<sub>3</sub> leaves its critical section and unlocks the semaphore: its priority level is downgraded to its previous default level. T<sub>1</sub> preempts T<sub>3</sub> , locks the semaphore, and enters its critical section.
+t7 : T<sub>1</sub> is suspended for some reason unrelated to T<sub>2</sub>, and T<sub>2</sub> begins executing.  
 
 ![alt text](img/Lecture13/image-15.png)  
 
 ![alt text](img/Lecture13/image-16.png)  
 
 None of the three big OS (Linux, Unix, Windows) were made with RTS in mind
-* Only extended to acomodate RTS later
+* Only extended to accommodate RTS later
 
-Using linux most likely means you have soft deadlines anyways  
+Using Linux most likely means you have soft deadlines anyways  
 
 ![alt text](img/Lecture13/image-17.png)  
 
 ![alt text](img/Lecture13/image-18.png)  
 
-General puropse OS usually dont care aobut your deadlines  
+General purpose OS usually don't care about your deadlines  
 
 ![alt text](img/Lecture13/image-19.png)  
 
@@ -126,8 +126,8 @@ General puropse OS usually dont care aobut your deadlines
 
 Deadlocks: 2 or more processes are holding onto locks/ resources and waiting for locks/ resources that are in turn being held as well  
 
-In this chapter, we want ot adddress deadlocks more
-* Identify contidions for deadlock
+In this chapter, we want to address deadlocks more
+* Identify conditions for deadlock
 * Methods to deal with deadlocks and to prevent them
 * How to detect deadlocks  
 
@@ -155,7 +155,7 @@ Not easy to break these conditions
 
 ![alt text](img/Lecture13/image-26.png)  
 
-Arrow from rescource to process means that the resource has been allocated to the corresponding process   
+Arrow from resource to process means that the resource has been allocated to the corresponding process   
 
 The other way around means that process is waiting for resource  
 
@@ -183,10 +183,10 @@ Here, we can clearly see that we have a deadlock since P3 is requesting a resour
 
 ![alt text](img/Lecture13/image-31.png)  
 
-Prevetion: The programmer is writing th code in such a way that will prevent deadlocks from occuring  
+Prevention: The programmer is writing the code in such a way that will prevent deadlocks from occurring  
 * Ensure that at least one condition is not held  
 
-For dining philiosphers, we may assign each chopstick with a number. Then, we have the philospohers pick up their chopsticks in increasing order, which will prevent deadlocks  
+For dining philosophers, we may assign each chopstick with a number. Then, we have the philosophers pick up their chopsticks in increasing order, which will prevent deadlocks  
 
 *Video here?*  
 
@@ -204,4 +204,4 @@ Programmer is not really doing anything here, since th OS is the one doing so
 
 ![alt text](img/Lecture13/image-36.png)  
 
-Review on Monday, my continue if there is time afterwards  
+Review on Monday, may continue if there is time afterwards  
