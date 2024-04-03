@@ -4,52 +4,52 @@
 
 ### Chapter 7: Memory Management (cont.)  
 
-Last time: Looking at different types of partiononing:
+Last time: Looking at different types of partitioning:
 * Contiguous partitioning  
 
 Talked about different algos for partitioning  
 
-![alt text](image.png)  
+![alt text](img/Lecture18/image.png)  
 
-![alt text](image-1.png)  
+![alt text](img/Lecture18/image-1.png)  
 
-There are still some kind of contiguous allocation has both intrnal and externl fragmentation  
+There are still some kind of contiguous allocation has both internal and external fragmentation  
 * Tries to minimize both  
 
-![alt text](image-2.png)
+![alt text](img/Lecture18/image-2.png)
 
-IN the beginning, the memory is completley free, so we have one block. Any rquest made will be rounded up to the nearest power of 2 to avoid unnecessary internal fragmentation  
+In the beginning, the memory is completely free, so we have one block. Any request made will be rounded up to the nearest power of 2 to avoid unnecessary internal fragmentation  
 * Make the internal fragmentation less than the total emory used in the allocation  
 
 Once we allocate, we need to split up the rest of the memory into partitions of powers of 2.  
 
-![alt text](image-3.png)  
+![alt text](img/Lecture18/image-3.png)  
 
 IN this slide, we can see the "buddy" aspect of this algorithm. If we have two 128k nodes, one being occupied and the other free, when they are both free, they will merge into a bigger 256k node  
 
-![alt text](image-4.png)  
+![alt text](img/Lecture18/image-4.png)  
 
-![alt text](image-5.png)  
+![alt text](img/Lecture18/image-5.png)  
 
-![alt text](image-6.png)  
+![alt text](img/Lecture18/image-6.png)  
 
 CS: Code Segment
 DS: Data Segment
 SS: Stack Segment  
 
-Advantage of segmentation, you only need a contiguou section for the smaller segments compared to having a larger one in a linear address space  
+Advantage of segmentation, you only need a contiguous section for the smaller segments compared to having a larger one in a linear address space  
 
-![alt text](image-7.png)  
+![alt text](img/Lecture18/image-7.png)  
 
-![alt text](image-8.png)  
+![alt text](img/Lecture18/image-8.png)  
 
-![alt text](image-9.png)  
+![alt text](img/Lecture18/image-9.png)  
 
-![alt text](image-10.png)  
+![alt text](img/Lecture18/image-10.png)  
 
-![alt text](image-11.png)  
+![alt text](img/Lecture18/image-11.png)  
 
-![alt text](image-12.png)  
+![alt text](img/Lecture18/image-12.png)  
 
 :Aware:  
 
@@ -84,32 +84,32 @@ Virtual space       Physical space
 -----                   ------
 ```  
 
-![alt text](image-13.png)  
+![alt text](img/Lecture18/image-13.png)  
 
-Seperate page tables for A,B, etc.  
+Separate page tables for A,B, etc.  
 
 Reverse page table. For each frame, which processes are here? 
 
 Having a direct page table is an issue since they are huge and you need one for each process
 
-As swe see here, the memory is paritioned into different sections of frames. Its up to the OS to determine how to give out frames, how to replace them, etc.  
+As we see here, the memory is partitioned into different sections of frames. Its up to the OS to determine how to give out frames, how to replace them, etc.  
 
-![alt text](image-14.png)  
+![alt text](img/Lecture18/image-14.png)  
 
 ### Chapter 8: Virtual memory  
 
-![alt text](image-15.png)  
+![alt text](img/Lecture18/image-15.png)  
 
 Cannot quantify thrashing, but it is apparent when it is happening due to slow application loading times
 * OS is running too many processes without enough memory, so there is a high rate of page swapping  
 
-![alt text](image-16.png)  
+![alt text](img/Lecture18/image-16.png)  
 
-![alt text](image-17.png)  
+![alt text](img/Lecture18/image-17.png)  
 
-![alt text](image-18.png)  
+![alt text](img/Lecture18/image-18.png)  
 
-![alt text](image-19.png)  
+![alt text](img/Lecture18/image-19.png)  
 
 Small page size: 
 * Need an even bigger page table
@@ -119,10 +119,10 @@ Small page size:
 
 Large page size: Inverse of the above bullets lol  
 
-![alt text](image-20.png)  
+![alt text](img/Lecture18/image-20.png)  
 
-![alt text](image-21.png)  
+![alt text](img/Lecture18/image-21.png)  
 
-Prepging: OS knows that a process will know x amount of pages. Therefore, will set the pages aside before the process comes in  
+Pre-paging: OS knows that a process will know x amount of pages. Therefore, will set the pages aside before the process comes in  
 
 Resident set: How many frames given to a certain process  
