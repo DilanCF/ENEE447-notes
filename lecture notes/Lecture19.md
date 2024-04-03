@@ -87,7 +87,7 @@ Change the "timestamp" field into a "Use" bit
 
 Keeps a pointer that is at the very top. It tries to replace the use bit but it is already occupied. It changes the bit to 0 and moves on until it sees a one. It will eventually come back around and see the 0 and fault  
 
-*Video on 2nd chance algo*  
+[Video on 2nd chance algo](https://www.youtube.com/watch?v=voiL2-nQmlU&ab_channel=BBarters)  
 
 ![alt text](img/Lecture19/image-36.png)  
 

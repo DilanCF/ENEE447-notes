@@ -188,7 +188,6 @@ Prevention: The programmer is writing the code in such a way that will prevent d
 
 For dining philosophers, we may assign each chopstick with a number. Then, we have the philosophers pick up their chopsticks in increasing order, which will prevent deadlocks  
 
-*Video here?*  
 
 ![alt text](img/Lecture13/image-32.png)  
 

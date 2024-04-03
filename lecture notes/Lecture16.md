@@ -58,8 +58,6 @@ Is this a guaranteed deadlock?
 
 ![alt text](img/Lecture12/image-6.png)  
 
-*Video here*  
-
 Is this in a safe state or not?  
 
 ![alt text](img/Lecture12/image-7.png)  

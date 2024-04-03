@@ -97,7 +97,7 @@ Fragmentation: Due to the way we are allocating, some memory cannot be used
 * External: After some time, two processes terminate and leave memory. Will leave gaps equal to their size, say two 512 MB gaps. If another program comes in and needs 1024MB, we have sufficient space, but not contiguously. Therefore, we cannot use it. 
 * Internal: Say the minimum allocation size is 512MB, but a process comes in that only needs 300 MB. We will have space wasted due to the policy of allocating at least the minimum  
 
-*Video on fragmentation?* 
+[Video on fragmentation](https://www.youtube.com/watch?v=ALahNOwrTvg&ab_channel=Education4u)
 
 ![alt text](img/Lecture17/image-12.png)  
 
@@ -126,4 +126,4 @@ Say we have three gaps in the memory of sizes 200MB, 250MB, and 300MB. These gap
 * First: 200MB
 * Next: Keep a pointer, and search from there. Use the pointer to make sure allocation is done correctly  
 
-*Video on placement algorithms?*  
+[Video on placement algorithms](https://www.youtube.com/watch?v=HBQZ5rlaN-s&ab_channel=ShrutiP)  
