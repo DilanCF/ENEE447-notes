@@ -10,7 +10,7 @@ Last time: Replacement policies
 
 Fixed allocation: every process needs their own frames  
 
-Variable: THings can change, can have loval replacement  
+Variable: Things can change, can have local replacement  
 
 Say we have P1,P2,...Pn
 
@@ -24,7 +24,7 @@ In between this time, we have a page fault. We look at the 4 or 5 frames (depend
 The main decision here is figuring out how many frames to give to eah process
 
 If equal allocation, its easy
-* Becomes diffictult if not  
+* Becomes difficult if not  
 
 ![alt text](img/Lecture20/image-1.png)  
 
@@ -42,7 +42,7 @@ The decision of how many to leave free is up to the OS
 
 ![alt text](img/Lecture20/image-5.png)  
 
-If you are doing global replacement, it happens automaically. This is not the case with local rpelacement howeveer  
+If you are doing global replacement, it happens automatically. This is not the case with local replacement however  
 
 Say P1 encounters many page faults. OS takes notice and will increase frames given to that process.  
 
@@ -52,21 +52,21 @@ Delta: How many unique pages were accessed by the process in a set amount of tim
 
 Working set depends on the size of the window  
 
-See approximately how many frames we should give to a process to let it run comfortably without comprimising the other process's ability to run  
+See approximately how many frames we should give to a process to let it run comfortably without compromising the other process's ability to run  
 
 Goal: Figure out the comfortable working set size  
 
 ![alt text](img/Lecture20/image-7.png)  
 
-Working set dpedns on when youre lookin on the screen and how big your delta is  
+Working set depends on when you're looking on the screen and how big your delta is  
 
-To find the deltas, you look behind however many refrences by the window size and include all the unique refrencees  
+To find the deltas, you look behind however many references by the window size and include all the unique references  
 
-Crucilly:  2 issues
+Crucially:  2 issues
 1. What should be the window size? 
-2. How do you trakc which pages were referenced?  
+2. How do you track which pages were referenced?  
 
-Operating sysem cannot jut look backwards unless it stores all that information  
+Operating system cannot just look backwards unless it stores all that information  
 
 OS is not active  
 
@@ -79,11 +79,11 @@ LRU approximation was done with the "use" bit
 Thrashing: Oops, all page faults!
 * OS spends more time switching than actually executing processes  
 
-Since we have threashing, we know we have too many processes loaded in. Therefore, we need ot load them out to make more room for other proceses to run comfortably  
+Since we have thrashing, we know we have too many processes loaded in. Therefore, we need ot load them out to make more room for other processes to run comfortably  
 
 ![alt text](img/Lecture20/image-9.png)  
 
-IN a page table that we have, we have one bit that we use as the "use" bit.  
+In a page table that we have, we have one bit that we use as the "use" bit.  
 
 At the beginning, all use bits are 0. As they are referenced, we increment them  
 
@@ -91,12 +91,12 @@ We continue this for the window size. at the end, we go back and count the 1's t
 
 Once we have recorded this, we set them all back to 0  
 
-Then, we repeast for the next Delta pages  
+Then, we repeat for the next Delta pages  
 
-OUr windows are non-overlapping  
-* Wont be able to caprute any patterns that may occur in two seperate windows  
+Our windows are non-overlapping  
+* Won't be able to capture any patterns that may occur in two separate windows  
 
-Solutino: Use 2 bits for the overlap  
+Solution: Use 2 bits for the overlap  
 
 ![alt text](img/Lecture20/image-10.png)  
 
