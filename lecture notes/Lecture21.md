@@ -1,10 +1,10 @@
-# ENEE447 Lecture 20  
+# ENEE447 Lecture 21  
 
 > 4/10/24
 
 *Exam 2 will be on 5/8*
 
-### Chapter 10: IO Management  
+### Chapter 11: IO Management  
 
 Say there is a hard disk, and there is a disk controller. The Disk controller may not know too much about the application.  
 
