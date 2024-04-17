@@ -1,6 +1,12 @@
+# ENEE447 Lecture 23  
+
+> 4/17/24
+
+### Chapter 12: File System (cont.) 
+
 ![alt text](img/Lecture23/image.png)  
 
-To Organize data better, tree stuctured directiries are better suited  
+To Organize data better, tree structured directories are better suited  
 
 ![alt text](img/Lecture23/image-1.png)  
 
@@ -18,9 +24,9 @@ If we wish to delete `/spell/count`, it deletes the links between the directorie
 
 Here, with acyclic, if we wish to `edit /dict/count`, what should happen?  
 
-Linux privides the command `unlink`, which will remove the path but NOT delete the file. Therefore, when we try to access count via edit, we can still access count  
+Linux provides the command `unlink`, which will remove the path but NOT delete the file. Therefore, when we try to access count via edit, we can still access count  
 
-This requires additional bookeeping  
+This requires additional book keeping  
 
 
 
@@ -70,22 +76,22 @@ The "d" at the beginning of the permissions slot is for "directories"
 
 ![alt text](img/Lecture23/image-23.png)  
 
-open(file, r/w/etc.), what happens is since this is sitting in disk, eveyrtime it needs to know something about it it costs time. What we do is copy relevant info form storage and make a copy in kenrel memory  
+open(file, r/w/etc.), what happens is since this is sitting in disk, every time it needs to know something about it it costs time. What we do is copy relevant info form storage and make a copy in kernel memory  
 
 ![alt text](img/Lecture23/image-24.png)  
 
 ![alt text](img/Lecture23/image-25.png)  
 
-Using the smae API means is you have a single API to interact with the file system, does not matter what arrangement you use, you can use the same commands on files ???  
+Using the same API means is you have a single API to interact with the file system, does not matter what arrangement you use, you can use the same commands on files ???  
 
 ![alt text](img/Lecture23/image-26.png)  
 
 ![alt text](img/Lecture23/image-27.png)  
 
-How shuld the OS manitain a dirctory?  
+How should the OS maintain a directory?  
 * Directory is a part of a tree and a directory keeps track of the files underneath that file  
 
-Dir has a place in a tre structur and keeps a list of files and subdirectories  
+Dir has a place in a tree structure and keeps a list of files and subdirectories  
 * Subject to change  
 
 Operations  
@@ -135,7 +141,7 @@ Windows used to (???) use this, now they use NTFS
 
 ![alt text](img/Lecture23/image-38.png)  
 
-Index table is like an array, and you need to decide uprfotn how many blocks it may need.  
+Index table is like an array, and you need to decide upfront how many blocks it may need.  
 
 With the linked file, you can keep extending it without the same problem  
 
