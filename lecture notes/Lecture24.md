@@ -13,35 +13,35 @@ Abstraction: Something like Google Maps
 
 File systems are also an abstraction  
 * The user only sees the file getting created, removed, etc.
-    * Lower level: Memory adreses are being accessed and modified  
+    * Lower level: Memory addresses are being accessed and modified  
 
-If the memory has seveeral modules, but we only see it as a linear bank of memory, this is ocnsidered an abstraciton  
+If the memory has several modules, but we only see it as a linear bank of memory, this is considered an abstraction  
 
 Above ^, th cylinder represents the hard disk. The file is being represented on  virtual disk on the right.  
 
 ![alt text](img/Lecture24/image-1.png)  
 
-OS provides abstraciotn AND virtualization  
+OS provides abstraction AND virtualization  
 
 ![alt text](img/Lecture24/image-2.png)  
 
-The Non-V machine in and of itself had a bit of viftulization  
+The Non-V machine in and of itself had a bit of virtualization  
 
 VMM: AKA Hypervisor  
-* Providing three diffeent VMs  
+* Providing three different VMs  
 * NOw we can run 3 different OSs that can be different  
     * Different from dual booting  
     * Dual booting is more like the img/Lecture24/image on the left, just with a switch at boot time  
 
-IN many ways, the VMM takes some rlle from the OS that is done in the left situation  
+In many ways, the VMM takes some role from the OS that is done in the left situation  
 
-We gernerla dont make nay changs to the OSs. Whatever the OS is, it thinks it is interacting directl with the hardware when it really not  
-* The difficulty is when, what happens when a proces makes a system call?
-    * anytim a process needs help from the OS, it makes a sys call and the OS handles it. 
+We generally don't make any changes to the OSs. Whatever the OS is, it thinks it is interacting directly with the hardware when it really not  
+* The difficulty is when, what happens when a process makes a system call?
+    * Anytime a process needs help from the OS, it makes a sys call and the OS handles it. 
 
 * When a VM makes a syscall, instead of going to the kernel, the sys call is handled by the VMM  
 
-Portablility is the main thing driving our need for virtual machines  
+Portability is the main thing driving our need for virtual machines  
 
 ![alt text](img/Lecture24/image-3.png)  
 
@@ -55,7 +55,7 @@ There are mny different ways to do virtualization, some of which shown above
 
 For (b), we have the advantage of translating from ISA 2 to OS 1, meaning we can run programs meant for one ISA on a different set via translation  
 
-(d) shows 2 VMMs working togethr 
+(d) shows 2 VMMs working together 
 
 ![alt text](img/Lecture24/image-6.png)  
 
@@ -65,9 +65,9 @@ For (b), we have the advantage of translating from ISA 2 to OS 1, meaning we can
 
 ![alt text](img/Lecture24/image-9.png)  
 
-Comic sans :vomit:  
+Comic sans :mask:  
 
-^ Not a perfecct example acc. to professor  
+^ Not a perfect example acc. to professor  
 
 OS supports multiple processes  
 

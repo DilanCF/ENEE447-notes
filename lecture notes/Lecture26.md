@@ -9,36 +9,36 @@
 2. ABI  
 3. API  
 
-MOstly looking at type 1 implmentaiton
+Mostly looking at type 1 implementation
 * How do we make it happen?  
 
 ![alt text](img/Lecture26/image.png)  
 
-HW modification hlps with all the rest of them  
+HW modification helps with all the rest of them  
 
 ![alt text](img/Lecture26/image-1.png)  
 
 Not practical since it is inefficient  
 
-Difference between 1a b, in fulll, every abstraction gets emulated (could be using simulator). Trap and emulation most of the absrtascitons are done on the underkying HW
+Difference between 1a b, in full, every abstraction gets emulated (could be using simulator). Trap and emulation most of the abstractions are done on the underlying HW
 
-Binary code: Only the executable code is miodified. Not something that needs to be done earlier. Could be doing something else  
+Binary code: Only the executable code is modified. Not something that needs to be done earlier. Could be doing something else  
 
-Source code modification is not considered pure emulation: Cnanot taek something like Linux and consider it as it comes to you  
+Source code modification is not considered pure emulation: Cannot take something like Linux and consider it as it comes to you  
 
 ![alt text](img/Lecture26/image-2.png)  
 
-Simple scalar simulators in 446, same thing being done here. Will take each instruciton and emulate it's function  
+Simple scalar simulators in 446, same thing being done here. Will take each instruction and emulate it's function  
 
 Adv. Can have a different ISA  
 
 ![alt text](img/Lecture26/image-3.png)  
 
-Only cetian insturciotns are emulated. The rest are run on hardware  
+Only certain instructions are emulated. The rest are run on hardware  
 
 HArdware runs on Physical Kernel mode OR Physical User Mode  
 
-The application program may do a systme call. In that case, where will it go?  
+The application program may do a system call. In that case, where will it go?  
 * Syscall is decoded, and tries to run on HW. But, once we have identified it, we switch modes to physical KM, and try on the other layers. However, the only layer that is also in physical KM is the Hypervisor.  
 
 ![alt text](img/Lecture26/image-4.png)  
@@ -51,17 +51,17 @@ The application program may do a systme call. In that case, where will it go?
 
 ![alt text](img/Lecture26/image-8.png)  
 
-When x86 wa sintorducd, there were already 4 physical modes. Only 0 and 3 were being used. Later on, they implmented more layers  
+When x86 was introduced, there were already 4 physical modes. Only 0 and 3 were being used. Later on, they implemented more layers  
 
 ![alt text](img/Lecture26/image-9.png)  
 
 ![alt text](img/Lecture26/image-10.png)  
 
-Sensitive == Privilieged  
+Sensitive == Privileged  
 
 ![alt text](img/Lecture26/image-11.png)  
 
-Advanage: Not every priviliaged instruciton will be translated. Some other prviliaged ones can be replaced with non privilged, and therefore run on HW, making it faster  
+Advantage: Not every privileged instruction will be translated. Some other privileged ones can be replaced with non privileged, and therefore run on HW, making it faster  
 
 ![alt text](img/Lecture26/image-12.png)  
 

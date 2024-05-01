@@ -67,19 +67,19 @@ NOTE: BUllet point "Hypervisor implemented as firmware..." should be associated 
 
 ![alt text](img/Lecture25/image-13.png)  
 
-Main task: We have a guest and a host. The guest has a view of so many things. IN the ISA, we define GIIO*s, Sys regs, memory, etc.  
+Main task: We have a guest and a host. The guest has a view of so many things. In the ISA, we define GIIO*s, Sys regs, memory, etc.  
 
 Then, the instructions. The ISA will have defined some arithmetic instructions as well.  
 
-The host ISA, what is actually there, some number of GPIO registers. IN order to implemnt this, some mechanim must be done to get from the guest to the host  
+The host ISA, what is actually there, some number of GPIO registers. IN order to implement this, some mechanism must be done to get from the guest to the host  
 
 ![alt text](img/Lecture25/image-14.png)  
 
-Say we have a set amount of ram. What the VMM does is for the VM, it alloates the black boxes for guest 1, and the lemon (???) boxes for another  
+Say we have a set amount of ram. What the VMM does is for the VM, it allocates the black boxes for guest 1, and the lemon (???) boxes for another  
 
 ![alt text](img/Lecture25/image-15.png)   
 
-Clasic VM: Type 1  
+Classic VM: Type 1  
 
 3rd bullet: If we do this, Windows will have full access to HW and may interfere with Linux OS. IOW, will not allow VMM to do its job  
 
