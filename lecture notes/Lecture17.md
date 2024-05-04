@@ -4,14 +4,14 @@
 
 ### Chapter 7: Memory Management  
 
-So far; Process and processor management  
+So far: Process and processor management  
 
 Other component: Memory management  
-* OS has important role
+* OS has important role  
 
-Most programs cannot have enough memory
+Most programs cannot have enough memory  
 
-How much does each process get?
+How much does each process get?  
 * This is the responsibility of the OS, and is what we mean by Memory Management  
 
 What the programmer sees:  
@@ -34,7 +34,7 @@ Hardware will take care of the memory, which in turn is taken care of by the OS
 
 Medium term scheduling: Say we have 100 active processes, but we do not have enough memory. OS will swap out processes in order to ensure each process will have enough memory to do its thing  
 
-Chapter 8 will continue this idea with one specific memory management method: Paging :nervous:  
+Chapter 8 will continue this idea with one specific memory management method: Paging :cold_sweat:  
 
 ![alt text](img/Lecture17/image.png)  
 

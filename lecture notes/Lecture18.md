@@ -33,8 +33,8 @@ IN this slide, we can see the "buddy" aspect of this algorithm. If we have two 1
 
 ![alt text](img/Lecture18/image-6.png)  
 
-CS: Code Segment
-DS: Data Segment
+CS: Code Segment  
+DS: Data Segment  
 SS: Stack Segment  
 
 Advantage of segmentation, you only need a contiguous section for the smaller segments compared to having a larger one in a linear address space  
@@ -51,7 +51,7 @@ Advantage of segmentation, you only need a contiguous section for the smaller se
 
 ![alt text](img/Lecture18/image-12.png)  
 
-:Aware:  
+![MFW paging](img/misc/Aware.png)  
 
 For user memory, it is standard across general purpose systems to use paging  
 
